@@ -12,6 +12,7 @@ public protocol SwiftlyUserDefaultable {
     var key: String { get }
 }
 
+@available (*, deprecated, message: "Use `UserDefaults` extension directly.")
 public class SwiftlyUserDefault: NSObject {
     
     private static let db = UserDefaults.standard

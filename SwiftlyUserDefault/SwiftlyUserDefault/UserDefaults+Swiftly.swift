@@ -10,20 +10,16 @@ import Foundation
 
 extension UserDefaults {
 	
-	@discardableResult
-	public func setValue<T>(_ key: SwiftlyUserDefaultable, value: T) -> Bool {
+	public func setValue<T>(_ key: SwiftlyUserDefaultable, value: T) {
 		setValue(value, forKey: key.key)
-		return synchronize()
 	}
 	
 	public func getValue<T>(_ key: SwiftlyUserDefaultable) -> T? {
 		return value(forKey: key.key) as? T
 	}
 	
-	@discardableResult
-	public func deleteValue(_ key: SwiftlyUserDefaultable) -> Bool {
+	public func deleteValue(_ key: SwiftlyUserDefaultable) {
 		removeObject(forKey: key.key)
-		return synchronize()
 	}
 	
 	public func deleteAllValue(_ keys: SwiftlyUserDefaultable...) {

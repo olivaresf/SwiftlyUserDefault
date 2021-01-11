@@ -20,23 +20,21 @@ public class SwiftlyUserDefault: NSObject {
     
     @discardableResult
     public static func setValue<T>(_ key: SwiftlyUserDefaultable, value: T) -> Bool {
-        db.setValue(value, forKey: key.key)
-        return db.synchronize()
+        db.setValue(key, value: value)
+        return true
     }
     
     public static func getValue<T>(_ key: SwiftlyUserDefaultable) -> T? {
-        return db.value(forKey: key.key) as? T
+		return db.getValue(key)
     }
     
     @discardableResult
     public static func deleteValue(_ key: SwiftlyUserDefaultable) -> Bool {
-        db.removeObject(forKey: key.key)
-        return db.synchronize()
+        db.deleteValue(key)
+        return true
     }
     
     public static func deleteAllValue(_ keys: SwiftlyUserDefaultable...) {
-        for key in keys {
-            self.deleteValue(key)
-        }
+		db.deleteAllValue(keys as! SwiftlyUserDefaultable)
     }
 }

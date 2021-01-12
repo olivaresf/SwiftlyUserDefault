@@ -36,6 +36,6 @@ public class SwiftlyUserDefault: NSObject {
     }
     
     public static func deleteAllValue(_ keys: SwiftlyUserDefaultable...) {
-		db.deleteAllValue(keys as! SwiftlyUserDefaultable)
+		db.deleteAllValue(keys)
     }
 }

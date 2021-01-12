@@ -22,9 +22,9 @@ public extension UserDefaults {
 		removeObject(forKey: key.key)
 	}
 	
-	func deleteAllValue(_ keys: SwiftlyUserDefaultable...) {
+	func deleteAllValue(_ keys: [SwiftlyUserDefaultable]) {
 		for key in keys {
-			self.deleteValue(key)
+			deleteValue(key)
 		}
 	}
 	

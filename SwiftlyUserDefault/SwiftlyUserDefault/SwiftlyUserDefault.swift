@@ -16,7 +16,7 @@ public protocol SwiftlyUserDefaultable {
 public class SwiftlyUserDefault: NSObject {
     
     private static let db = UserDefaults.standard
-
+    
     private override init() { super.init() }
     
     @discardableResult
@@ -26,7 +26,7 @@ public class SwiftlyUserDefault: NSObject {
     }
     
     public static func getValue<T>(_ key: SwiftlyUserDefaultable) -> T? {
-		return db.getValue(key)
+        return db.getValue(key)
     }
     
     @discardableResult
@@ -36,6 +36,6 @@ public class SwiftlyUserDefault: NSObject {
     }
     
     public static func deleteAllValue(_ keys: SwiftlyUserDefaultable...) {
-		db.deleteAllValue(keys)
+        db.deleteAllValue(keys)
     }
 }

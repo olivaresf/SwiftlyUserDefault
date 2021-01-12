@@ -8,21 +8,21 @@
 
 import Foundation
 
-extension UserDefaults {
+public extension UserDefaults {
 	
-	public func setValue<T>(_ key: SwiftlyUserDefaultable, value: T) {
+	func setValue<T>(_ key: SwiftlyUserDefaultable, value: T) {
 		setValue(value, forKey: key.key)
 	}
 	
-	public func getValue<T>(_ key: SwiftlyUserDefaultable) -> T? {
+	func getValue<T>(_ key: SwiftlyUserDefaultable) -> T? {
 		return value(forKey: key.key) as? T
 	}
 	
-	public func deleteValue(_ key: SwiftlyUserDefaultable) {
+	func deleteValue(_ key: SwiftlyUserDefaultable) {
 		removeObject(forKey: key.key)
 	}
 	
-	public func deleteAllValue(_ keys: SwiftlyUserDefaultable...) {
+	func deleteAllValue(_ keys: SwiftlyUserDefaultable...) {
 		for key in keys {
 			self.deleteValue(key)
 		}

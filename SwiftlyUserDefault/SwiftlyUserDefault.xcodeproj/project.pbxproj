@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		98A5099823B5CFDE00F05CC4 /* SwiftlyUserDefault.h in Headers */ = {isa = PBXBuildFile; fileRef = 98A5099623B5CFDE00F05CC4 /* SwiftlyUserDefault.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		98A5099F23B5CFE800F05CC4 /* SwiftlyUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A5099E23B5CFE800F05CC4 /* SwiftlyUserDefault.swift */; };
+		9BB4F58B25AD1BB100A1BB35 /* UserDefaults+Swiftly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4F58A25AD1BB100A1BB35 /* UserDefaults+Swiftly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		98A5099623B5CFDE00F05CC4 /* SwiftlyUserDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftlyUserDefault.h; sourceTree = "<group>"; };
 		98A5099723B5CFDE00F05CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98A5099E23B5CFE800F05CC4 /* SwiftlyUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftlyUserDefault.swift; sourceTree = "<group>"; };
+		9BB4F58A25AD1BB100A1BB35 /* UserDefaults+Swiftly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Swiftly.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 				98A5099623B5CFDE00F05CC4 /* SwiftlyUserDefault.h */,
 				98A5099723B5CFDE00F05CC4 /* Info.plist */,
 				98A5099E23B5CFE800F05CC4 /* SwiftlyUserDefault.swift */,
+				9BB4F58A25AD1BB100A1BB35 /* UserDefaults+Swiftly.swift */,
 			);
 			path = SwiftlyUserDefault;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98A5099F23B5CFE800F05CC4 /* SwiftlyUserDefault.swift in Sources */,
+				9BB4F58B25AD1BB100A1BB35 /* UserDefaults+Swiftly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
